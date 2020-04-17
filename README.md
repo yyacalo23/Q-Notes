@@ -16,8 +16,8 @@ a b c  d
 x:([]time:11 13 14;sym:`msft`ibm`ge;qty:100 200 150)
 y:([]time:10 10 10 12;sym:`ibm`msft`msft`ibm;px:100 99 101 98)
 
-q)aj [`sym`time;x;y]
-time   sym   qty   px 
+q)aj [sym`time;x;y]
+time  sym   qty   px 
 ----------------------
 11     msft   100  101
 13     ibm    200  98
