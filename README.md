@@ -1,3 +1,14 @@
+#Queries
+
+###Efficiency
+
+HDBs are date partitioned.
+**Always** put a date clause first in queries to reduce the directories kdb+needs to look in.
+
+```q
+select from Quote where date = .z.d-1
+```
+##Joins
 
 ##lj
 
@@ -43,14 +54,13 @@ Find files in a directory:
 q)key `:/home/yyacalo/dir
 ,file
 ```
+```q
 q)` sv `:/home/yycalo/dir,file
 `:/home/yyacalo/dir/file
 ```
 Create file paths for all files in a directory:
 ```q
-
 q)` sv 'directory,'key directory
-
 ```
 ###FILE SIZES
 
