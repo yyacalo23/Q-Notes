@@ -24,9 +24,10 @@ a b c  d
 3 K 2  20
 ```
 ##aj 
-
+```q
 x:([]time:11 13 14;sym:`msft`ibm`ge;qty:100 200 150)
 y:([]time:10 10 10 12;sym:`ibm`msft`msft`ibm;px:100 99 101 98)
+```
 ```q
 q)aj [sym`time;x;y]
 time  sym   qty   px 
@@ -36,10 +37,9 @@ time  sym   qty   px
 14     ge     150
 ```
 ##ij
-
+```q
 x:([]a:1 2;b:`x`y;c:10 20)
 y:([a:1 2]b:``z;c:1 0N)
-```q
 q)x ij y 
 a b c
 -----
