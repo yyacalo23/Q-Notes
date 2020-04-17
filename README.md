@@ -62,7 +62,7 @@ Create file paths for all files in a directory:
 ```q
 q)` sv 'directory,'key directory
 ```
-### FILE SIZES
+### Files sizes
 ```q
 Find the uncompressed size of a file (2 ways):(-21!x)`uncompressedLenght;hcount `:file
 
