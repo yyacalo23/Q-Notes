@@ -1,6 +1,6 @@
-#Queries
+# Queries
 
-###Efficiency
+### Efficiency
 
 HDBs are date partitioned.
 **Always** put a date clause first in queries to reduce the directories kdb+needs to look in.
@@ -8,9 +8,9 @@ HDBs are date partitioned.
 ```q
 select from Quote where date = .z.d-1
 ```
-##Joins
+## Joins
 
-##lj
+## lj
 ```q
 x:([]a:1 2 3;b:`I`J`K;c:10 20 30)
 y:([a:1 3;b`I`K]c:1 2;d:10 20)
@@ -22,7 +22,7 @@ a b c  d
 2 J 20
 3 K 2  20
 ```
-##aj 
+## aj 
 ```q
 x:([]time:11 13 14;sym:`msft`ibm`ge;qty:100 200 150)
 y:([]time:10 10 10 12;sym:`ibm`msft`msft`ibm;px:100 99 101 98)
@@ -34,7 +34,7 @@ time  sym   qty   px
 13     ibm    200  98
 14     ge     150
 ```
-##ij
+## ij
 ```q
 x:([]a:1 2;b:`x`y;c:10 20)
 y:([a:1 2]b:``z;c:1 0N)
@@ -45,9 +45,9 @@ a b c
 1   1
 2 z
 ```
-##File System
+## File System
 
-###File and Filepaths
+### File and Filepaths
 
 Find files in a directory:
 ```q
@@ -62,7 +62,7 @@ Create file paths for all files in a directory:
 ```q
 q)` sv 'directory,'key directory
 ```
-###FILE SIZES
+### FILE SIZES
 ```q
 Find the uncompressed size of a file (2 ways):(-21!x)`uncompressedLenght;hcount `:file
 
