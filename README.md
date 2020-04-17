@@ -11,40 +11,41 @@ select from Quote where date = .z.d-1
 ##Joins
 
 ##lj
-
+```q
 x:([]a:1 2 3;b:`I`J`K;c:10 20 30)
 y:([a:1 3;b`I`K]c:1 2;d:10 20)
-
+```
+```q
 q)x lj y
 a b c  d
 ---------
 1 I 1  10
 2 J 20
 3 K 2  20
-
+```
 ##aj 
 
 x:([]time:11 13 14;sym:`msft`ibm`ge;qty:100 200 150)
 y:([]time:10 10 10 12;sym:`ibm`msft`msft`ibm;px:100 99 101 98)
-
+```q
 q)aj [sym`time;x;y]
 time  sym   qty   px 
 ----------------------
 11     msft   100  101
 13     ibm    200  98
 14     ge     150
-
+```
 ##ij
 
 x:([]a:1 2;b:`x`y;c:10 20)
 y:([a:1 2]b:``z;c:1 0N)
-
+```q
 q)x ij y 
 a b c
 -----
 1   1
 2 z
-
+```
 ##File System
 
 ###File and Filepaths
