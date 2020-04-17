@@ -63,7 +63,7 @@ Create file paths for all files in a directory:
 q)` sv 'directory,'key directory
 ```
 ###FILE SIZES
-
+```q
 Find the uncompressed size of a file (2 ways):(-21!x)`uncompressedLenght;hcount `:file
 
 Compress a file: -19!(arc;tgt;lbs;alg;lvl)
@@ -75,4 +75,4 @@ Find the compressed size of a file: (-21!files)`compressed size
 Open a handle to a file:hopen `:datafile
 
 Delete a file:hdelete `:datafile
-
+```
